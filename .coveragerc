@@ -1,0 +1,9 @@
+[run]
+source = ./utils
+
+[report]
+exclude_lines =
+    def save_model_pkl
+    
+[html]
+directory = ml-html-coverage

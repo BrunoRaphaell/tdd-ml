@@ -1,0 +1,4 @@
+dados/creditcard.csv filter=lfs diff=lfs merge=lfs -text
+dados/schema_creditcard.json filter=lfs diff=lfs merge=lfs -text
+dados/creditcard_na.csv filter=lfs diff=lfs merge=lfs -text
+dados filter=lfs diff=lfs merge=lfs -text

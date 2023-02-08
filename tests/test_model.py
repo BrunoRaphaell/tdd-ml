@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/bruno/Desktop/teste/utils')
+sys.path.append('..')
 
 import pandas as pd 
 import pytest

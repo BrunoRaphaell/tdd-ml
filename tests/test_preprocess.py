@@ -2,7 +2,7 @@
 
 # Balanceamento de classes
 import sys
-sys.path.append('/home/bruno/Desktop/teste/utils')
+sys.path.append('..')
 
 from preprocess import (load_data,
                         balanced_smote,

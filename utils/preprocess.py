@@ -9,8 +9,9 @@ def load_data():
 def remove_null_values(data):
     return data.dropna()
 
-def balanced_smote(data):
-    X, y = data.drop('Class', axis=1), data['Class']
+def balanced_smote(data, target='Class'):
+    print(f"Colunas_balanced_smote = {data.columns}")
+    X, y = data.drop(target, axis=1), data[target]
     sm = SMOTE(random_state=42)
     X_res, y_res = sm.fit_resample(X, y)
     return X_res.join(y_res)

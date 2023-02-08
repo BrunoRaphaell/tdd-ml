@@ -22,3 +22,5 @@ A flag -m é utilizada para informar ao interpretador Python que o comando a ser
 Já ao utilizar apenas pip install, o sistema operacional tenta localizar o executável pip na lista de caminhos de busca de comandos (como o PATH). Se o executável pip não estiver presente nessa lista, o sistema operacional não será capaz de encontrá-lo e o comando resultará em erro.
 
 Em resumo, a flag -m é usada para garantir que o interpretador Python execute o comando como se fosse um módulo, enquanto a falta dela significa que o sistema operacional tentará localizar o executável pip como se fosse um comando de linha de comando.
+
+**[Ententendo o git lfs](https://www.atlassian.com/git/tutorials/git-lfs)**

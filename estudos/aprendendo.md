@@ -81,3 +81,5 @@ Minhas métricas são calculadas incorretamente?
 * Testar o modelo em outro arquivo como por exemplo a saída esperada.
 
 O pytest vai pegar o path de onde está sendo executado o comando. Portando tomar cuidado ao fazer a importação dos módulos.  
+
+Não é possível com o git lfs trackear pasta inteira, tem que ser arquivo por arquivo.

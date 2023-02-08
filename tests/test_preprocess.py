@@ -4,6 +4,10 @@
 import sys
 sys.path.append('..')
 
+import os 
+
+print(os.getcwd())
+
 from preprocess import (load_data,
                         balanced_smote,
                         remove_null_values,

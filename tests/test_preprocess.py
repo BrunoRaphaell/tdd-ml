@@ -6,7 +6,7 @@ sys.path.append('..')
 
 import os 
 
-print(os.getcwd())
+print(f"caminho = {os.getcwd()}")
 
 from preprocess import (load_data,
                         balanced_smote,

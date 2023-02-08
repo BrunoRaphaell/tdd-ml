@@ -8,6 +8,8 @@ import os
 
 print(f"caminho = {os.getcwd()}")
 
+print(f"arquivos = {os.listdir()}")
+
 from preprocess import (load_data,
                         balanced_smote,
                         remove_null_values,

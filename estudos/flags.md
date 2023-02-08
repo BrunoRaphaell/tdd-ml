@@ -11,5 +11,3 @@ O sinalizador `--tb` controla o tipo de rastreamento de pilha que o pytest exibe
 * `pytest -ra --tb=line -k "test_1 or test_2"`
 
 O sinalizador `-k` permite que você selecione testes por nome. Você pode usar expressões regulares para selecionar testes. O exemplo acima seleciona os testes `test_1` e `test_2`.
-
-* 

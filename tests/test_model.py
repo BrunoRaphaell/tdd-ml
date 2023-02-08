@@ -1,12 +1,9 @@
-import sys
-sys.path.append('..')
-
 import pandas as pd 
 import pytest
 from sklearn.metrics import accuracy_score
 
-from model_construction import load_artefacts
-from preprocess import (load_data,
+from utils.model_construction import load_artefacts
+from utils.preprocess import (load_data,
                         balanced_smote,
                         remove_null_values,
                         remove_duplicate_values,

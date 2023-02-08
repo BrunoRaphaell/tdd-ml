@@ -80,6 +80,4 @@ Minhas métricas são calculadas incorretamente?
 * fazer todos os pré processamentos no test do modelo. Utilizar outro arquivo para fazer o teste do modelo.
 * Testar o modelo em outro arquivo como por exemplo a saída esperada.
 
-### Exemplos de testes para testar o modelo de machine learning de classificação
-
-* 
+O pytest vai pegar o path de onde está sendo executado o comando. Portando tomar cuidado ao fazer a importação dos módulos.  

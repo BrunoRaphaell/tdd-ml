@@ -3,14 +3,13 @@ import json
 from imblearn.over_sampling import SMOTE
 
 def load_data():
-    data = pd.read_csv('dados/creditcard.csv', nrows=int(284807*0.1))
+    data = pd.read_csv('dados/creditcard.csv')
     return data
 
 def remove_null_values(data):
     return data.dropna()
 
 def balanced_smote(data, target='Class'):
-    print(f"Colunas_balanced_smote = {data.columns}")
     X, y = data.drop(target, axis=1), data[target]
     sm = SMOTE(random_state=42)
     X_res, y_res = sm.fit_resample(X, y)

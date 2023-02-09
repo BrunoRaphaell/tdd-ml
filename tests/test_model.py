@@ -15,8 +15,6 @@ credit_card_balanced = balanced_smote(credit_card_without_null_values)
 dados_final = remove_duplicate_values(credit_card_balanced)
 # dados_final = modifying_schema(credit_card_without_duplicate)
 
-print(f"Colunas = {dados_final.columns}")
-
 class TestModel:
     
     # Testar se o modelo está sendo salvo

@@ -1,15 +1,3 @@
-# As funções de pré processamento estão funcionando corretamente?
-
-# Balanceamento de classes
-# import sys
-# sys.path.append('..')
-
-# import os 
-
-# print(f"caminho = {os.getcwd()}")
-
-# print(f"arquivos = {os.listdir()}")
-
 from utils.preprocess import (load_data,
                         balanced_smote,
                         remove_null_values,

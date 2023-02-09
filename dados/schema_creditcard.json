@@ -1,5 +1,4 @@
-"""
-{
+"""{
   "Amount": "float",
   "Class": "int",
   "Time": "int",

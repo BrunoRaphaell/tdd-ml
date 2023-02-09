@@ -1,7 +1,6 @@
 import pandas as pd
 import json
 from imblearn.over_sampling import SMOTE
-import pytest
 
 def load_data():
     data = pd.read_csv('dados/creditcard.csv', nrows=int(284807*0.1))
@@ -20,7 +19,6 @@ def balanced_smote(data, target='Class'):
 def remove_duplicate_values(data):
     return data.drop_duplicates()
 
-@pytest.mark.skip(reason="Verificar depois porque está dando erro")
 def modifying_schema(data):
                             
     with open("dados/schema_creditcard.json") as f:

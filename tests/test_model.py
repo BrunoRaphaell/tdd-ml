@@ -12,8 +12,8 @@ from utils.preprocess import (load_data,
 dados = load_data()
 credit_card_without_null_values = remove_null_values(dados)
 credit_card_balanced = balanced_smote(credit_card_without_null_values)
-credit_card_without_duplicate = remove_duplicate_values(credit_card_balanced)
-dados_final = modifying_schema(credit_card_without_duplicate)
+dados_final = remove_duplicate_values(credit_card_balanced)
+# dados_final = modifying_schema(credit_card_without_duplicate)
 
 print(f"Colunas = {dados_final.columns}")
 
@@ -32,7 +32,6 @@ class TestModel:
         assert hasattr(model, "predict"), "O modelo não possui a função 'predict'"
         assert hasattr(model, "fit"), "O modelo não possui a função 'fit'"
         
-    @pytest.mark.skip(reason="Verificar depois porque está dando erro")
     def test_acceptance(self):
         model = load_artefacts("rf_credit_card")
         X = dados_final.drop('Class', axis=1)

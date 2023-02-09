@@ -1,5 +1,7 @@
-"""
-{
+import json
+
+# This string is not a valid JSON object
+invalid_json_string = """{
   "Amount": "float",
   "Class": "int",
   "Time": "int",
@@ -33,3 +35,8 @@
   "V9": "float"
 }
 """
+
+try:
+    json_object = json.loads(invalid_json_string)
+except json.decoder.JSONDecodeError as e:
+    print("Error:", e)

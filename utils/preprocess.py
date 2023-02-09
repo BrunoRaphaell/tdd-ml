@@ -21,7 +21,8 @@ def remove_duplicate_values(data):
 
 def modifying_schema(data):
     with open("dados/schema_creditcard.json") as f:
-        schema = json.load(f)
+        schema = json.loads(f.read())
+        
     
     for col, dtype in schema.items():
         data[col] = data[col].astype(dtype)

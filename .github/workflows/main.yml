@@ -19,6 +19,8 @@ jobs:
       - name: Install Tox and any other packages
         run: pip install tox
       - name: Executando main
-        run: python main.py
+        run: |
+          pip install -r requirements.txt
+          python main.py
       - name: Run Tox
         run: tox -c tox_coverage.ini -e py

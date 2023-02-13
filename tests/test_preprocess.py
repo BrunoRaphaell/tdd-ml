@@ -8,14 +8,13 @@ import pandas as pd
 import pytest
 import numpy as np  
 
-
-dados = pd.read_csv('dados/creditcard.csv')
-
-# Os dados foram carregados corretamente?
-
-
 class TestPreprocess:
-
+    
+    @pytest.fixture
+    def dados(self):
+        data = pd.read_csv('dados/creditcard.csv')
+        yield data
+    
     def test_load_data(self):
 
         # Carregando os dados
@@ -29,7 +28,7 @@ class TestPreprocess:
 
     # Há dados nulos?
 
-    def test_null_values(self):
+    def test_null_values(self, dados):
         # Verifique se há valores nulos
         dados_without_null = remove_null_values(dados)
         assert dados_without_null.isnull().sum().sum(
@@ -37,7 +36,7 @@ class TestPreprocess:
 
     # Os dados estão balanceados?
     # @pytest.mark.skip(reason="Estou trabalhando com dados que contém nulos")
-    def test_balanceamento(self):
+    def test_balanceamento(self, dados):
 
         # Coluna com a classe dos dados
         class_col = "Class"
@@ -58,7 +57,7 @@ class TestPreprocess:
             class_distribution[1] - target_ratio) < 0.2, "O conjunto de dados não está balanceado"
 
 
-    def test_duplicate_values(self):
+    def test_duplicate_values(self, dados):
         dados_without_duplicate = remove_duplicate_values(dados)
 
         # Verifique se há valores duplicados
@@ -66,7 +65,7 @@ class TestPreprocess:
         ), "Encontrado valores duplicados no conjunto de dados"
 
     @pytest.mark.skip(reason="Verificar depois porque está dando erro")
-    def test_schema(self):
+    def test_schema(self, dados):
         # Carregue seus dados aqui
         data_schema = modifying_schema(dados)
         
